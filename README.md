@@ -49,4 +49,4 @@ The analysis demonstrates how behavioral data can drive targeted marketing, rete
 ## 🚀 How to Run
 1. Clone this repository  
    ```bash
-   git clone https://github.com/yourusername/customer-segmentation-rfm.git
+   git clone https://github.com/Appu-Anand/Customer Segmentation & Persona Strategy-.git
