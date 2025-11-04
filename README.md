@@ -1,135 +1,134 @@
-🧠 Customer Segmentation & Persona Strategy
+# 🧠 Customer Segmentation & Persona Strategy  
+**Tools:** Python (Pandas, Scikit-learn, Plotly), Power BI, Excel  
+**Date:** August 2025  
 
-Tools: Python (Pandas, Scikit-learn, Plotly), Power BI, Excel
-Date: August 2025
+---
 
-📋 Overview
+## 📋 Overview  
+This project performs customer segmentation using **RFM (Recency, Frequency, Monetary)** analysis and **KMeans clustering**, translating behavioral data into actionable customer personas.
 
-This project performs customer segmentation using RFM (Recency, Frequency, Monetary) analysis and KMeans clustering, translating behavioral patterns into actionable personas.
+It demonstrates how businesses can use **data-driven insights** to improve marketing performance, retention, and customer lifetime value.  
 
-The analysis highlights how businesses can leverage data-driven insights to improve marketing performance, retention strategies, and customer lifetime value.
+A fully interactive **Power BI dashboard** was also built to visualize customer segments, revenue contribution, and behavioral patterns for better storytelling and decision-making.
 
-In addition to the Python analysis, the results were visualized through a Power BI dashboard that provides an interactive and executive-friendly view of customer personas, revenue contribution, and behavioral patterns.
+---
 
-🧰 Workflow
-1. Data Cleaning & Preparation
+## 🧰 Workflow  
 
-Removed missing or invalid transactions (e.g., cancellations).
+### 1. Data Cleaning & Preparation  
+- Removed missing or invalid transactions (e.g., cancellations).  
+- Computed **Total Revenue per Transaction** (`Quantity × UnitPrice`).  
+- Standardized date formats and ensured unique customer IDs.  
 
-Computed Total Revenue per Transaction (Quantity × UnitPrice).
+### 2. RFM Calculation  
+- **Recency:** Days since last purchase.  
+- **Frequency:** Number of unique transactions per customer.  
+- **Monetary:** Total revenue contributed by the customer.  
 
-Standardized date formats and ensured unique customer IDs.
+### 3. Segmentation  
+- Applied **KMeans clustering** on normalized RFM features.  
+- Determined **4 key customer groups** using the elbow and silhouette methods.  
 
-2. RFM Calculation
+### 4. Persona Definition & Strategy  
+Converted clusters into **human-readable personas** with actionable business strategies for marketing and retention.  
 
-Recency: Days since last purchase.
+### 5. Visualization  
+- Built **interactive Python dashboards** using Plotly.  
+- Designed a **Power BI report** for executive storytelling and business presentation.
 
-Frequency: Number of unique transactions per customer.
+---
 
-Monetary: Total revenue contributed by the customer.
+## 📊 Power BI Dashboard  
 
-3. Segmentation
+**Title:** `Customer Segmentation Dashboard`  
 
-Applied KMeans clustering on normalized RFM features.
+**Features:**  
+- **KPIs:** Total Customers, Avg Recency, Avg Frequency, Avg Monetary, % High-Value Customers  
+- **Charts:**  
+  - Donut chart — Customer Distribution by Persona  
+  - Bar chart — Revenue Contribution by Persona  
+  - Scatter plot — Frequency vs Monetary (“Customer Behavior Map”)  
+  - Summary Table — Revenue Share %, Avg Recency, Avg Frequency, Avg Monetary  
+- **Interactive Filters:**  
+  - Persona Dropdown  
+  - Cluster Slider  
+  - Monetary Tier Slicer (Low / Mid / High spend levels)  
+- **Theme:** Elegant maroon–beige–gray color palette  
+- **Interactivity:** All visuals respond dynamically to slicer selections  
 
-Determined 4 key customer groups using the elbow and silhouette methods.
+**Key Insights:**  
+- **Loyal Champions** dominate both customer base and total revenue.  
+- **At-Risk Customers** show strong reactivation potential.  
+- **Recent High Spenders** are emerging high-value customers to nurture further.  
 
-4. Persona Definition & Strategy
+---
 
-Each segment was interpreted into business personas with actionable strategies for marketing and retention.
+## 👥 Key Personas  
 
-5. Visualization
+| Persona | Characteristics | Suggested Strategy |
+|----------|-----------------|--------------------|
+| **Loyal Champions** | Frequent, high-value, recent buyers | Maintain loyalty through VIP programs and early access |
+| **Recent High Spenders** | New and valuable customers | Encourage repeat purchases with personalized offers |
+| **At-Risk Customers** | Previously active, now dormant | Reactivation campaigns with targeted discounts |
+| **Occasional Buyers** | Moderate frequency, low spend | Promote with tailored product recommendations |
 
-Built interactive plots in Python (Plotly).
+---
 
-Developed a Power BI dashboard for business presentation and executive storytelling.
+## 📈 Insights  
+- Segmented customers into **4 actionable personas** using RFM + KMeans  
+- Built an **interactive Power BI dashboard** for dynamic persona exploration  
+- Identified *At-Risk* and *Recent High Spenders* as high-potential growth segments  
+- Proposed data-backed strategies estimated to improve engagement by **~12% QoQ**
 
-📊 Power BI Dashboard
+---
 
-Title: Customer Segmentation Dashboard
+## 📂 Files in This Repository  
 
-Features:
+| File | Description |
+|------|--------------|
+| `customer_segmentation.ipynb` | Main analysis notebook (Python) |
+| `Customer_Segmentation_Output.xlsx` | Final RFM dataset with cluster & persona labels |
+| `Persona_RFM_Summary.html` | Interactive Plotly dashboard |
+| `Customer_Segmentation_Dashboard.pbix` | **Power BI interactive dashboard** |
+| `README.md` | Project documentation |
 
-KPIs: Total Customers, Avg Recency, Avg Frequency, Avg Monetary, % High-Value Customers.
+---
 
-Charts:
+## 🚀 How to Run  
 
-Customer Distribution by Persona (Donut Chart)
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/Appu-Anand/Customer-Segmentation-and-Persona-Strategy.git
+   cd Customer-Segmentation-and-Persona-Strategy
+   
+2. **Run the Python notebook**
+    jupyter notebook customer_segmentation.ipynb
+3.**Open the Power BI dashboard**
+   Launch Power BI Desktop
+   Open Customer_Segmentation_Dashboard.pbix
+   Check that the file path links correctly to Customer_Segmentation_Output.xlsx
+   
+**🌟 Deliverables**
 
-Revenue Contribution by Persona (Bar Chart)
+✅ Python Analytics Notebook – RFM segmentation + KMeans clustering
+✅ Excel Dataset – Final labeled customer personas
+✅ Power BI Dashboard – Interactive executive visualization
+✅ Business Recommendations – Persona-specific engagement strategy
 
-Customer Behavior Map (Scatter: Frequency vs Monetary)
+**🧩 Tech Stack**
 
-Summary Table with conditional formatting for Revenue Share %.
+Python: pandas, numpy, scikit-learn, matplotlib, seaborn, plotly
 
-Interactive Filters:
+BI Tool: Microsoft Power BI
 
-Persona Selector
+Data Source: Online retail transactional dataset (Excel/CSV)
 
-Cluster Slider
+**🧠 Key Learning**
 
-Monetary Tier Slicer (Low / Mid / High spend levels)
+Translating machine learning output into business-ready personas
 
-Theme: Elegant maroon-beige-gray palette matching professional BI standards.
+Integrating Python analytics → Power BI storytelling
 
-Interactivity: All visuals respond to slicer filters dynamically for deeper insight exploration.
+Designing dashboards aligned with executive decision-making
 
-Key Insights from Dashboard:
-
-Loyal Champions dominate both customer base and revenue contribution.
-
-At-Risk Customers present high reactivation potential.
-
-Recent High Spenders show strong future lifetime value if retention strategies are applied.
-
-👥 Key Personas
-Persona	Characteristics	Suggested Strategy
-Loyal Champions	Frequent, high-value, recent buyers	Maintain loyalty with VIP perks and early access
-Recent High Spenders	New and valuable customers	Encourage repeat purchases with personalized offers
-At-Risk Customers	Previously active, now dormant	Reactivation campaigns and discount incentives
-Occasional Buyers	Moderate frequency, low spend	Increase engagement via tailored recommendations
-📈 Insights
-
-Segmented customers into 4 actionable personas using RFM + KMeans.
-
-Power BI dashboard adds interactive visualization and easy storytelling.
-
-Identified At-Risk and Recent High Spenders as the growth opportunity segments.
-
-Strategic adoption can improve engagement by an estimated 12% QoQ.
-
-📂 Files in This Repository
-File	Description
-customer_segmentation.ipynb	Main analysis notebook (Python)
-Customer_Segmentation_Output.xlsx	Final RFM dataset with cluster & persona labels
-Persona_RFM_Summary.html	Interactive Plotly summary
-Customer_Segmentation_Dashboard.pbix	Power BI interactive dashboard
-README.md	Project overview and documentation
-🚀 How to Run
-
-Clone the repository
-
-git clone https://github.com/Appu-Anand/Customer-Segmentation-and-Persona-Strategy.git
-cd Customer-Segmentation-and-Persona-Strategy
-
-
-Run Jupyter Notebook
-
-jupyter notebook customer_segmentation.ipynb
-
-
-Open Power BI Dashboard
-
-Open Customer_Segmentation_Dashboard.pbix in Power BI Desktop.
-
-Ensure dataset path (Customer_Segmentation_Output.xlsx) is correctly linked.
-
-🌟 Deliverables
-
-Python Analytics Notebook: RFM segmentation and KMeans clustering
-
-Excel Dataset: Labeled customer personas
-
-Power BI Dashboard: Executive-friendly segmentation visualization
-
-Business Recommendations: Persona-level engagement strategy
+    
